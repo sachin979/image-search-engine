@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "PoppinsRegular";
+  src: url("./fonts/Poppins-Regular.ttf") format("ttf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  font-family: PoppinsRegular;
+  margin: 0;
+  padding: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search__part {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 35vh;
+  align-items: center;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.search__part > div {
+  font-size: 35px;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search__part::before {
+  content: "";
+  background-image: url("./images/banner.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.65;
+  z-index: -1;
+}
+
+.input__block {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transform: translateY(-30px);
+  margin-bottom: 50px;
+  width: fit-content;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.text__box {
+  border: 0;
+  width: 40vw;
+  height: 60px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgb(0 0 0 / 15%);
+  padding: 10px;
+}
+
+.search__icon {
+  position: absolute;
+  right: 0;
+}
+.image__class {
+  padding: 4px;
 }
